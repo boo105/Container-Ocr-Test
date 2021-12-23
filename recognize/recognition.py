@@ -183,7 +183,6 @@ def get_text(character, imgH, imgW, recognizer, converter, image_list,\
     # predict first round
     result1 = recognizer_predict(recognizer, converter, test_loader,batch_max_length,\
                                  ignore_idx, char_group_idx, decoder, beamWidth, device = device)
-
     # predict second round
     low_confident_idx = [i for i,item in enumerate(result1) if (item[1] < contrast_ths)]
     if len(low_confident_idx) > 0:

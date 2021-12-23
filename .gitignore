@@ -1,2 +1,3 @@
 *.pth
 models/
+__pycache__/
